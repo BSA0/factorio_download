@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
+
 def getting_versions(url):
     r = requests.get(url)
     print(r.text)
