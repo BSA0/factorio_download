@@ -4,13 +4,17 @@ from getting_versions import getting_versions
 import json
 import threading
 
-constants = json.load(open(r"settings.json"))
+const = json.load(open(r"settings.json"))
 
-#getting_versions(constants["request_url"])
+getting_versions(const['request_url'], const['selector'])
 
-#file_path, file_name = download_file(constants['universal_url'], constants['path'], constants['user'], constants['token'], '0.16.51', 'alpha', 'win64')
+"""file_path, file_name = download_file(const['download_url'],
+                                     const['path'],
+                                     const['username'],
+                                     const['token'],
+                                     '0.16.51', 'alpha', 'win64')"""
 
-#upload_file(constants["disk_url"], constants["disk_path"], constants["disk_token"], file_path, file_name)
+# upload_file(constants["disk_url"], constants["disk_path"], constants["disk_token"], file_path, file_name)
 
 # 1)Аунтификация в ЯД и загрузка на диск В ВИДЕ ФУНКЦИИ. СЕЙЧАС ТЕСТИРОВАНИЕ!!!
 # TODO 2)Аунтификация в МЕГА и загрузка на диск
