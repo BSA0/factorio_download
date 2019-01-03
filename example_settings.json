@@ -1,0 +1,12 @@
+{
+
+  "path" : "<path to folder with project>",
+
+  "username" : "<your username on factorio.com>",
+  "password": "<your password on factorio.com>",
+  "token" : "<your token on factorio.com>",
+  "request_url" : "https://www.factorio.com/",
+  "login_url": "https://www.factorio.com/login",
+  "selector": "body > div:nth-child(2) > div.row > div > div:nth-child(1) > div.span4.index-sidebar > dl > dd:nth-child(4)",
+  "download_url": "https://factorio.com/get-download/{}/{}/{}?username={}&token={}"
+}

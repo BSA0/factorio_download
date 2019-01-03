@@ -1,5 +1,4 @@
 from download_file import download_file
-from upload_file import upload_file
 from getting_versions import getting_versions
 import json
 import threading
@@ -14,7 +13,6 @@ getting_versions(const['request_url'], const['selector'])
                                      const['token'],
                                      '0.16.51', 'alpha', 'win64')"""
 
-# upload_file(constants["disk_url"], constants["disk_path"], constants["disk_token"], file_path, file_name)
 
 # 1)Аунтификация в ЯД и загрузка на диск В ВИДЕ ФУНКЦИИ. СЕЙЧАС ТЕСТИРОВАНИЕ!!!
 # TODO 2)Аунтификация в МЕГА и загрузка на диск
