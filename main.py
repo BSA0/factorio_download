@@ -1,17 +1,28 @@
 from download_file import download_file
 from getting_versions import getting_versions
 import json
-import threading
+import os
+
+if not os.path.exists(r"settings.json"):
+    json_config = open(r"settings.json", 'w')
+    json.dump(json.load(r"example_settings.json"), json_config)
+    json_config.close()
+    print('Please, configure settings.json according to the instructions')
+    exit(0)
 
 const = json.load(open(r"settings.json"))
 
-getting_versions(const['request_url'], const['selector'])
+version = getting_versions(const['request_url'], const['selector'])
 
-"""file_path, file_name = download_file(const['download_url'],
-                                     const['path'],
-                                     const['username'],
-                                     const['token'],
-                                     '0.16.51', 'alpha', 'win64')"""
+if version != 'None':
+    for distro in ['win64', 'osx', 'linux64']:
+        file_path, file_name = download_file(const['download_url'],
+                                             const['path'],
+                                             const['username'],
+                                             const['token'],
+                                             version, 'alpha', distro)
+        
+
 
 
 # 1)Аунтификация в ЯД и загрузка на диск В ВИДЕ ФУНКЦИИ. СЕЙЧАС ТЕСТИРОВАНИЕ!!!
