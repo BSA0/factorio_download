@@ -8,5 +8,5 @@ setup(
     license='',
     author='Pechenux',
     author_email='',
-    description='', install_requires=['requests', 'tqdm', 'yadisk']
+    description='', install_requires=['requests', 'tqdm', 'yadisk', 'bs4']
 )
